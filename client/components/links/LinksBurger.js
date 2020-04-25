@@ -33,6 +33,7 @@ const LinksBurger = ({isLoggedIn, handleClick}) => {
         <div className="remove-outline">
           {isLoggedIn ? (
             <Fragment>
+              {/* The burger will show these links after you log in */}
               <div>
                 <Hello color="white" />
               </div>
@@ -62,6 +63,7 @@ const LinksBurger = ({isLoggedIn, handleClick}) => {
             </Fragment>
           ) : (
             <Fragment>
+              {/* The burger will show these links before you log in */}
               <div>
                 <Hello color="white" />
               </div>
