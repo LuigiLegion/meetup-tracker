@@ -54,7 +54,7 @@ if (!process.env.MEETUP_CLIENT_ID || !process.env.MEETUP_CLIENT_SECRET) {
   router.get(
     '/callback',
     passport.authenticate('meetup', {
-      successRedirect: '/',
+      successRedirect: '/home',
       failureRedirect: '/'
     })
   )
