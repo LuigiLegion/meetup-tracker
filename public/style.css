@@ -165,10 +165,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
   padding: 0em;
 }
 
-.meetup-oauth {
-  margin-top: 2em;
-}
-
 .burger-text-color {
   color: #fafafa;
 }
