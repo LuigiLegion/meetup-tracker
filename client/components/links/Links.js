@@ -14,9 +14,9 @@ const Links = ({isLoggedIn, handleClick}) => {
       <nav className="links-nav">
         {isLoggedIn ? (
           <div className="links-nav-container">
+            {/* The navbar will show these links after you log in */}
             <Hello className="links-nav-containee" color="gray" />
 
-            {/* The navbar will show these links after you log in */}
             <NavLink to="/" className="links-nav-containee">
               Home
             </NavLink>

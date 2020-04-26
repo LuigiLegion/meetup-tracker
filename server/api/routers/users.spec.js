@@ -14,15 +14,22 @@ describe('User routes', () => {
   })
 
   describe('/api/users/:userId', () => {
+    const codysMeetupId = '111111111111111111111'
+    const codysEmail = 'cody@puppybook.com'
     const codysFirstName = 'Cody'
     const codysLastName = 'DaPug'
-    const codysEmail = 'cody@puppybook.com'
+    const codysFullName = 'Cody DaPug'
+    const codysImgUrl =
+      'https://vetstreet.brightspotcdn.com/dims4/default/354d0cf/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fdc%2Fc4%2F8ccd3a28438d81b2f2f5d8031a05%2Fpug-ap-r82p3q-645.jpg'
 
     beforeEach(() => {
       return User.create({
+        meetupId: codysMeetupId,
+        email: codysEmail,
         firstName: codysFirstName,
         lastName: codysLastName,
-        email: codysEmail
+        fullName: codysFullName,
+        imgUrl: codysImgUrl
       })
     })
 

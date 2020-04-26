@@ -34,10 +34,20 @@ if (!process.env.MEETUP_CLIENT_ID || !process.env.MEETUP_CLIENT_SECRET) {
     (token, refreshToken, profile, done) => {
       const meetupId = profile.id
       const email = profile.email
+      const firstName = profile.firstName
+      const lastName = profile.lastName
+      const fullName = profile.fullName
+      const imgUrl = profile.imgUrl
 
       User.findOrCreate({
         where: {meetupId},
-        defaults: {email}
+        defaults: {
+          email,
+          firstName,
+          lastName,
+          fullName,
+          imgUrl
+        }
       })
         .then(([user]) => done(null, user))
         .catch(done)
@@ -54,7 +64,7 @@ if (!process.env.MEETUP_CLIENT_ID || !process.env.MEETUP_CLIENT_SECRET) {
   router.get(
     '/callback',
     passport.authenticate('meetup', {
-      successRedirect: '/',
+      successRedirect: '/home',
       failureRedirect: '/'
     })
   )
