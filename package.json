@@ -2,6 +2,9 @@
   "name": "meetup-tracker",
   "version": "1.0.0",
   "description": "",
+  "private": false,
+  "author": "Tal Luigi",
+  "license": "MIT",
   "engines": {
     "node": "12.11.1"
   },
@@ -38,8 +41,6 @@
       "git add"
     ]
   },
-  "author": "Fullstack Academy of Code",
-  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",
     "chalk": "^2.4.2",
