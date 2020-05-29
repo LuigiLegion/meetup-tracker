@@ -33,11 +33,16 @@ export const getCuratedMeetupsThunkCreator = () => {
       dispatch(toggledPreloaderActionCreator(true))
 
       const nycCoders = await axios.get('/api/meetups/31377401')
-      const bootcampersAnonymous = await axios.get('/api/meetups/19344391')
+      const nycBootcampersAnonymous = await axios.get('/api/meetups/19344391')
       const reactNyc = await axios.get('/api/meetups/22884788')
       const useReactNyc = await axios.get('/api/meetups/31543338')
       const vueNyc = await axios.get('/api/meetups/23275212')
       const graphqlNyc = await axios.get('/api/meetups/24714233')
+      const apolloMeteorNyc = await axios.get('/api/meetups/6597512')
+      const jamStackNyc = await axios.get('/api/meetups/18584762')
+      const pythonNyc = await axios.get('/api/meetups/263790')
+      const learnPythonNyc = await axios.get('/api/meetups/18360269')
+      const sqlNyc = await axios.get('/api/meetups/107592')
       const mongodbNyc = await axios.get('/api/meetups/1629296')
 
       const curatedMeetups = [
@@ -46,8 +51,8 @@ export const getCuratedMeetupsThunkCreator = () => {
           meetups: nycCoders.data.results
         },
         {
-          name: 'Bootcampers Anonymous',
-          meetups: bootcampersAnonymous.data.results
+          name: 'NYC Bootcampers Anonymous',
+          meetups: nycBootcampersAnonymous.data.results
         },
         {
           name: 'React NYC',
@@ -58,7 +63,7 @@ export const getCuratedMeetupsThunkCreator = () => {
           meetups: useReactNyc.data.results
         },
         {
-          name: 'Vue NYC',
+          name: 'VueNYC',
           meetups: vueNyc.data.results
         },
         {
@@ -66,7 +71,27 @@ export const getCuratedMeetupsThunkCreator = () => {
           meetups: graphqlNyc.data.results
         },
         {
-          name: 'MongoDB NYC',
+          name: 'ApolloMeteorNYC',
+          meetups: apolloMeteorNyc.data.results
+        },
+        {
+          name: 'JAMstack NYC',
+          meetups: jamStackNyc.data.results
+        },
+        {
+          name: 'The New York Python Meetup Group',
+          meetups: pythonNyc.data.results
+        },
+        {
+          name: 'Learn Python NYC',
+          meetups: learnPythonNyc.data.results
+        },
+        {
+          name: 'SQL NYC, The NoSQL & NewSQL Database Big Data Meetup',
+          meetups: sqlNyc.data.results
+        },
+        {
+          name: 'New York MongoDB User Group',
           meetups: mongodbNyc.data.results
         }
       ]
