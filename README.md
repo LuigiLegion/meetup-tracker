@@ -2,6 +2,10 @@
 
 ![Meetup Tracker Screenshot](./public/screenshot.png)
 
+### Video Presentation:
+
+Coming soon...
+
 ### Deployed Web App:
 
 https://meetup-tracker.herokuapp.com
