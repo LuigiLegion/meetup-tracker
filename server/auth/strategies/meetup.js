@@ -4,7 +4,7 @@ const passport = require('passport')
 const MeetupStrategy = require('passport-meetup-oauth2').Strategy
 
 // Models
-const {User} = require('../db/models')
+const {User} = require('../../db/models')
 
 /**
  * For OAuth keys and other secrets, your Node process will search
@@ -20,6 +20,7 @@ const {User} = require('../db/models')
  * process.env.MEETUP_CALLBACK = '/your/meetup/callback'
  **/
 
+// Initializations
 if (!process.env.MEETUP_CLIENT_ID || !process.env.MEETUP_CLIENT_SECRET) {
   console.log('Meetup client ID / secret not found. Skipping Meetup OAuth.')
 } else {
