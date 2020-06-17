@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
 import {Hello} from '../index'
-import {logout} from '../../store'
+import {logout} from '../../store/reducers/userReducer'
 
 // Component
 const Links = ({isLoggedIn, handleClick}) => {
@@ -77,10 +77,11 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Links)
-
 // Prop Types
 Links.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   handleClick: PropTypes.func.isRequired
 }
+
+// Exports
+export default connect(mapStateToProps, mapDispatchToProps)(Links)

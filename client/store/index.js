@@ -21,4 +21,3 @@ const store = createStore(reducer, middleware)
 
 // Exports
 export default store
-export * from './reducers/userReducer'

@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
 import {Home, PageNotFound} from './components'
-import {me} from './store'
+import {me} from './store/reducers/userReducer'
 
 // Component
 const Routes = ({loadInitialData, isLoggedIn}) => {
@@ -45,12 +45,13 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Routes))
-
 // Prop Types
 Routes.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   loadInitialData: PropTypes.func.isRequired
 }
+
+// Exports
+// The `withRouter` wrapper makes sure that updates are not blocked
+// when the url changes
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Routes))

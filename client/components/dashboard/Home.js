@@ -24,4 +24,5 @@ const Home = () => {
   )
 }
 
+// Exports
 export default Home

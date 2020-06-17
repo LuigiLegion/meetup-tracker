@@ -1,5 +1,6 @@
 /* global describe beforeEach afterEach it */
 
+// Imports
 import {expect} from 'chai'
 import configureMockStore from 'redux-mock-store'
 import thunkMiddleware from 'redux-thunk'
@@ -9,9 +10,11 @@ import MockAdapter from 'axios-mock-adapter'
 import history from '../../history'
 import {me, logout} from './userReducer'
 
+// Initializations
 const middlewares = [thunkMiddleware]
 const mockStore = configureMockStore(middlewares)
 
+// Tests
 describe('thunk creators', () => {
   let store
   let mockAxios
