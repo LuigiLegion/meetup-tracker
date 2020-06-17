@@ -60,10 +60,11 @@ const SingleGroup = ({name, meetups}) => {
   )
 }
 
-export default SingleGroup
-
 // Prop Types
 SingleGroup.propTypes = {
   name: PropTypes.string,
   meetups: PropTypes.array
 }
+
+// Exports
+export default SingleGroup

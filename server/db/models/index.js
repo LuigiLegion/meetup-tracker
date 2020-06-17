@@ -17,6 +17,4 @@ const User = require('./user')
  **/
 
 // Exports
-module.exports = {
-  User
-}
+module.exports = {User}

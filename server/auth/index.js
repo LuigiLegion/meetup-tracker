@@ -2,7 +2,7 @@
 const router = require('express').Router()
 
 // Middleware
-router.use('/meetup', require('./meetup'))
+router.use('/meetup', require('./strategies/meetup'))
 
 // Routes
 router.get('/me', (req, res) => {

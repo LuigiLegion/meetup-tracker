@@ -75,11 +75,12 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Groups)
-
 // Prop Types
 Groups.propTypes = {
   curatedMeetups: PropTypes.array,
   fetchedMeetups: PropTypes.bool,
   getCuratedMeetupsThunk: PropTypes.func
 }
+
+// Exports
+export default connect(mapStateToProps, mapDispatchToProps)(Groups)
