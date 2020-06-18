@@ -1,9 +1,12 @@
 // Imports
 const router = require('express').Router()
 
+const usersRouter = require('./routers/users')
+const meetupsRouter = require('./routers/meetups')
+
 // Middleware
-router.use('/users', require('./routers/users'))
-router.use('/meetups', require('./routers/meetups'))
+router.use('/users', usersRouter)
+router.use('/meetups', meetupsRouter)
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')
