@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 import {toggledPreloaderActionCreator} from './layoutReducer'
-import {toastNotificationGenerator} from '../../helpers'
+import {toastNotificationGenerator} from '../../utilities'
 
 // Initial State
 const initialState = {
