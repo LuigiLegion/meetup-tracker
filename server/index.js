@@ -9,6 +9,8 @@ const socketio = require('socket.io')
 const {blueBright, magenta, yellow} = require('chalk')
 
 const db = require('./db')
+const authRouter = require('./auth')
+const apiRouter = require('./api')
 
 // Initializations
 const app = express()
@@ -68,8 +70,8 @@ const createApp = () => {
   app.use(passport.session())
 
   // Auth and API routes
-  app.use('/auth', require('./auth'))
-  app.use('/api', require('./api'))
+  app.use('/auth', authRouter)
+  app.use('/api', apiRouter)
 
   // Static File-Serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))

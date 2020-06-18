@@ -1,8 +1,10 @@
 // Imports
 const router = require('express').Router()
 
+const meetupStrategy = require('./strategies/meetup')
+
 // Middleware
-router.use('/meetup', require('./strategies/meetup'))
+router.use('/meetup', meetupStrategy)
 
 // Routes
 router.get('/me', (req, res) => {
