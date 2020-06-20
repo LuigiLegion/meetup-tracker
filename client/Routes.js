@@ -40,9 +40,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  loadInitialData() {
-    dispatch(me())
-  }
+  loadInitialData: () => dispatch(me())
 })
 
 // Prop Types
