@@ -72,9 +72,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  handleClick() {
-    dispatch(logout())
-  }
+  handleClick: () => dispatch(logout())
 })
 
 // Prop Types
