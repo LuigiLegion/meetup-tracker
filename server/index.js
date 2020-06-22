@@ -5,16 +5,18 @@ const morgan = require('morgan')
 const compression = require('compression')
 const passport = require('passport')
 const session = require('express-session')
-const socketio = require('socket.io')
+const connectSessionSequelize = require('connect-session-sequelize')
+const socketIo = require('socket.io')
 const {blueBright, magenta, yellow} = require('chalk')
 
 const db = require('./db')
 const authRouter = require('./auth')
 const apiRouter = require('./api')
+const socket = require('./socket')
 
 // Initializations
 const app = express()
-const SequelizeStore = require('connect-session-sequelize')(session.Store)
+const SequelizeStore = connectSessionSequelize(session.Store)
 const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 1337
 
@@ -32,7 +34,9 @@ if (process.env.NODE_ENV === 'test') {
  * keys as environment variables, so that they can still be read by the
  * Node process on process.env
  **/
-if (process.env.NODE_ENV !== 'production') require('../secrets')
+if (process.env.NODE_ENV !== 'production') {
+  require('../secrets')
+}
 
 // Passport registration
 passport.serializeUser((user, done) => done(null, user.id))
@@ -139,8 +143,8 @@ const startListening = () => {
   })
 
   // Set up our Socket control center
-  const io = socketio(server)
-  require('./socket')(io)
+  const io = socketIo(server)
+  socket(io)
 }
 
 const syncDb = () => db.sync()
