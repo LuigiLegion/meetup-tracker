@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// Imports
 const {spawn} = require('child_process')
 const fs = require('fs')
 
@@ -9,9 +10,9 @@ const simpleGit = require('simple-git')()
 const YAML = require('yaml')
 
 /* Specific message contents stored as constants */
-
 const keyComments = require('./keyComments.json')
 
+// Initializations
 const idempotenceMessage = `It appears that your token has been encrypted.
 To run this script again, delete the \`before_deploy\` and \`deploy\` keys
 from the .travis.yml file.`
