@@ -126,7 +126,7 @@ ${yellow(cleanTrace)}
     // Send back error status
     res
       .status(error.status || 500)
-      .send(error.message || 'Internal server error.')
+      .send(error.message || 'Internal server error')
   })
 }
 
@@ -135,7 +135,7 @@ const startListening = () => {
   const server = app.listen(PORT, () => {
     console.log(`
 
-    Mixing it up on port ${PORT}
+    Server running on port ${PORT}
 
     ${blueBright(`http://localhost:${PORT}/`)}
 

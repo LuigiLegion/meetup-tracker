@@ -22,7 +22,7 @@ const {User} = require('../../db/models')
 
 // Initializations
 if (!process.env.MEETUP_CLIENT_ID || !process.env.MEETUP_CLIENT_SECRET) {
-  console.log('Meetup client ID / secret not found. Skipping Meetup OAuth.')
+  console.log('Meetup client ID / secret not found, skipping Meetup OAuth...')
 } else {
   const meetupConfig = {
     clientID: process.env.MEETUP_CLIENT_ID,
