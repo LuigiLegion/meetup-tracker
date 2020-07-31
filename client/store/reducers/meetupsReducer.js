@@ -43,7 +43,10 @@ export const getCuratedMeetupsThunkCreator = () => {
       const pythonNyc = await axios.get('/api/meetups/263790')
       const learnPythonNyc = await axios.get('/api/meetups/18360269')
       const sqlNyc = await axios.get('/api/meetups/107592')
+      const kaggleNyc = await axios.get('/api/meetups/29368983')
+      const noSqlNyc = await axios.get('/api/meetups/1569423')
       const mongodbNyc = await axios.get('/api/meetups/1629296')
+      const elasticNyc = await axios.get('/api/meetups/8841422')
 
       const curatedMeetups = [
         {
@@ -91,8 +94,20 @@ export const getCuratedMeetupsThunkCreator = () => {
           meetups: sqlNyc.data.results
         },
         {
+          name: 'Kaggle NYC',
+          meetups: kaggleNyc.data.results
+        },
+        {
+          name: 'NoSQL NYC',
+          meetups: noSqlNyc.data.results
+        },
+        {
           name: 'New York MongoDB User Group',
           meetups: mongodbNyc.data.results
+        },
+        {
+          name: 'Elastic New York City User Group',
+          meetups: elasticNyc.data.results
         }
       ]
 
