@@ -8,7 +8,7 @@ router.get('/:groupId', async (req, res, next) => {
 
   try {
     const {data} = await axios.get(
-      `https://api.meetup.com/2/events?&sign=true&photo-host=public&group_id=${groupId}&page=5`
+      `https://api.meetup.com/2/events?&sign=true&photo-host=public&group_id=${groupId}&page=3`
     )
 
     res.json(data)
