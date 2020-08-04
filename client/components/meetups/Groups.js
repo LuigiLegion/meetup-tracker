@@ -49,7 +49,7 @@ const Groups = ({curatedMeetups, fetchedMeetups, getCuratedMeetupsThunk}) => {
                 }
               })
               .map(curGroup => (
-                <div key={curGroup.name} className="col s12 m6 l4">
+                <div key={curGroup.id} className="col s12 m6 l4">
                   <SingleGroup
                     name={curGroup.name}
                     meetups={curGroup.meetups}
