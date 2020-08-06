@@ -2,6 +2,8 @@
 const router = require('express').Router()
 const axios = require('axios')
 
+const {pause} = require('../../utils')
+
 // Routes
 router.get('/curated', async (req, res, next) => {
   try {
@@ -25,8 +27,6 @@ router.get('/curated', async (req, res, next) => {
       {id: '19344391', name: 'NYC Bootcampers Anonymous'},
       {id: '31377401', name: 'NYC Coders'}
     ]
-
-    const pause = time => new Promise(resolve => setTimeout(resolve, time))
 
     const urls = groups.map(
       group =>
