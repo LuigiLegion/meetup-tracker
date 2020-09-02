@@ -5,7 +5,7 @@ const axios = require('axios')
 const {pause} = require('../../utils')
 
 // Routes
-router.get('/curated', async (req, res, next) => {
+router.get('/curated', async (_, res, next) => {
   try {
     const groups = [
       {id: '263790', name: 'The New York Python Meetup Group'},
@@ -35,20 +35,14 @@ router.get('/curated', async (req, res, next) => {
         }&page=3`
     )
 
-    const meetups = await urls.reduce(async (prevPromise, url) => {
-      const acc = await prevPromise
+    for (let i = 0; i < urls.length; i++) {
+      const {data} = await axios.get(urls[i])
+      // Empty array is a fallback in case Meetup API bugs out and responds
+      // with undefined for meetup groups that have no upcoming meetups
+      groups[i].meetups = data.results || []
 
       await pause(200)
-
-      const {data} = await axios.get(url)
-
-      return [...acc, data]
-    }, Promise.resolve([]))
-
-    groups.forEach((group, idx) => {
-      // The empty array is a fallback in case the Meetup API bugs out and responds with undefined rather than an empty array for meetup groups that have no upcoming meetups
-      group.meetups = meetups[idx].results || []
-    })
+    }
 
     res.json(groups)
   } catch (error) {
