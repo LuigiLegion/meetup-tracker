@@ -1,6 +1,6 @@
 // Imports
 import React, {useEffect} from 'react'
-import {withRouter, Route, Switch} from 'react-router-dom'
+import {withRouter, Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
