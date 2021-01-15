@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-import {SingleGroup} from '../index'
+import {Group} from '../index'
 import {getCuratedMeetupsThunkCreator} from '../../store/reducers/meetupsReducer'
 
 // Component
@@ -50,10 +50,7 @@ const Groups = ({curatedMeetups, fetchedMeetups, getCuratedMeetupsThunk}) => {
               })
               .map(curGroup => (
                 <div key={curGroup.id} className="col s12 m6 l4">
-                  <SingleGroup
-                    name={curGroup.name}
-                    meetups={curGroup.meetups}
-                  />
+                  <Group name={curGroup.name} meetups={curGroup.meetups} />
                 </div>
               ))
           )}
