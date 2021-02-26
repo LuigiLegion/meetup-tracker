@@ -1,5 +1,5 @@
 // Imports
-const pause = require('./controls/pause')
+const sleep = require('./controls/sleep')
 
 // Exports
-module.exports = {pause}
+module.exports = {sleep}
