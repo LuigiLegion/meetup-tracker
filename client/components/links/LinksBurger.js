@@ -5,7 +5,7 @@ import {slide as Menu} from 'react-burger-menu'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-import {Hello} from '../index'
+import {Hello} from '..'
 import {logout} from '../../store/reducers/userReducer'
 import {burgerStyles} from '../../styles'
 

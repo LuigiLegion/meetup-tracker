@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-import {Group} from '../index'
+import {Group} from '..'
 import {getCuratedMeetupsThunkCreator} from '../../store/reducers/meetupsReducer'
 
 // Component

@@ -1,7 +1,7 @@
 // Imports
 import React, {Fragment} from 'react'
 
-import {Groups} from '../index'
+import {Groups} from '..'
 
 // Component
 const Home = () => {

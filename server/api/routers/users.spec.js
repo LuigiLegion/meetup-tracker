@@ -4,7 +4,7 @@
 const {expect} = require('chai')
 const request = require('supertest')
 
-const app = require('../../index')
+const app = require('../..')
 const db = require('../../db')
 
 // Initializations
