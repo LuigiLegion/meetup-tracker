@@ -5,10 +5,10 @@
   "private": true,
   "author": "Tal Luigi",
   "license": "MIT",
+  "main": "index.js",
   "engines": {
     "node": "12.11.1"
   },
-  "main": "index.js",
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
