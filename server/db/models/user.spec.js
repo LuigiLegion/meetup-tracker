@@ -3,7 +3,7 @@
 // Imports
 const {expect} = require('chai')
 
-const db = require('../index')
+const db = require('..')
 
 // Initializations
 const User = db.model('user')

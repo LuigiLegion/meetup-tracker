@@ -2,7 +2,7 @@
 const router = require('express').Router()
 const axios = require('axios')
 
-const {pause} = require('../../utils')
+const {sleep} = require('../../utils')
 
 // Routes
 router.get('/curated', async (_, res, next) => {
@@ -41,7 +41,7 @@ router.get('/curated', async (_, res, next) => {
       // with undefined for meetup groups that have no upcoming meetups
       groups[i].meetups = data.results || []
 
-      await pause(200)
+      await sleep(0.2)
     }
 
     res.json(groups)

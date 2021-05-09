@@ -35,12 +35,12 @@ export const getCuratedMeetupsThunkCreator = () => {
       const {data} = await axios.get('/api/meetups/curated')
 
       dispatch(gotCuratedMeetupsSuccessActionCreator(data))
-      dispatch(toggledPreloaderActionCreator(false))
     } catch (error) {
       console.error(error)
       dispatch(gotCuratedMeetupsErrorActionCreator(error))
-      dispatch(toggledPreloaderActionCreator(false))
       toastNotification('Error! Unable To Fetch Meetups', 'red')
+    } finally {
+      dispatch(toggledPreloaderActionCreator(false))
     }
   }
 }

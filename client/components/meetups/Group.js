@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import moment from 'moment'
 
 // Component
-const SingleGroup = ({name, meetups}) => {
+const Group = ({name, meetups}) => {
   return (
     <div className="section">
       <div className="card">
@@ -61,10 +61,10 @@ const SingleGroup = ({name, meetups}) => {
 }
 
 // Prop Types
-SingleGroup.propTypes = {
+Group.propTypes = {
   name: PropTypes.string,
   meetups: PropTypes.array
 }
 
 // Exports
-export default SingleGroup
+export default Group
