@@ -12,6 +12,7 @@ const initialState = {}
 
 // Action Creators
 export const gotUserActionCreator = user => ({type: GOT_USER, user})
+
 export const removedUserActionCreator = () => ({type: REMOVED_USER})
 
 // Thunk Creators
