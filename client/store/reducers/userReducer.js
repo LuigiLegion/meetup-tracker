@@ -16,24 +16,28 @@ export const gotUserActionCreator = user => ({type: GOT_USER, user})
 export const removedUserActionCreator = () => ({type: REMOVED_USER})
 
 // Thunk Creators
-export const me = () => async dispatch => {
-  try {
-    const {data} = await axios.get('/auth/me')
+export const me = () => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get('/auth/me')
 
-    dispatch(gotUserActionCreator(data || initialState))
-  } catch (error) {
-    console.error(error)
+      dispatch(gotUserActionCreator(data || initialState))
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
 
-export const logout = () => async dispatch => {
-  try {
-    await axios.post('/auth/logout')
+export const logout = () => {
+  return async dispatch => {
+    try {
+      await axios.post('/auth/logout')
 
-    dispatch(removedUserActionCreator())
-    history.push('/')
-  } catch (error) {
-    console.error(error)
+      dispatch(removedUserActionCreator())
+      history.push('/')
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
 
