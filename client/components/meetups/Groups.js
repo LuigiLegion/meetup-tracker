@@ -72,7 +72,7 @@ const mapDispatchToProps = dispatch => ({
 
 // Prop Types
 Groups.propTypes = {
-  curatedMeetups: PropTypes.array,
+  curatedMeetups: PropTypes.arrayOf(PropTypes.object),
   fetchedMeetups: PropTypes.bool,
   getCuratedMeetupsThunk: PropTypes.func
 }

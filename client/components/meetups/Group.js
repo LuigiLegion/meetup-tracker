@@ -63,7 +63,7 @@ const Group = ({name, meetups}) => {
 // Prop Types
 Group.propTypes = {
   name: PropTypes.string,
-  meetups: PropTypes.array
+  meetups: PropTypes.arrayOf(PropTypes.object)
 }
 
 // Exports
