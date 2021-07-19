@@ -1,5 +1,3 @@
-/* global describe beforeEach it */
-
 // Imports
 import {expect} from 'chai'
 import React from 'react'
@@ -14,13 +12,15 @@ enzyme.configure({adapter})
 
 // Tests
 describe('Hello', () => {
-  let hello
+  it('renders the first name in a span when the firstName prop is received', () => {
+    const hello = shallow(
+      <Hello
+        firstName="Cody"
+        color="white"
+        onClick={event => event.stopPropagation()}
+      />
+    )
 
-  beforeEach(() => {
-    hello = shallow(<Hello firstName="Cody" />)
-  })
-
-  it('renders the first name in a span', () => {
     expect(hello.find('span').text()).to.be.equal('Hello, Cody.')
   })
 })
