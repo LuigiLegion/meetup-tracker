@@ -11,9 +11,10 @@ const Home = () => {
 
       <div className="center">
         {'Made with ❤ by '}
+
         <a
           className="author-link"
-          href="https://www.linkedin.com/in/talluigi"
+          href="https://www.linkedin.com/in/tal-luigi"
           target="_blank"
           rel="noopener noreferrer"
         >
