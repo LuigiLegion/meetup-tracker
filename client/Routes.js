@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
 import {Home, PageNotFound} from './components'
-import {me} from './store/reducers/userReducer'
+import {me} from './store'
 
 // Component
 const Routes = ({loadInitialData, isLoggedIn}) => {

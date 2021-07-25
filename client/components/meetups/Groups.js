@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
 import {Group} from '..'
-import {getCuratedMeetupsThunkCreator} from '../../store/reducers/meetupsReducer'
+import {getCuratedMeetupsThunkCreator} from '../../store'
 
 // Component
 const Groups = ({curatedMeetups, fetchedMeetups, getCuratedMeetupsThunk}) => {
