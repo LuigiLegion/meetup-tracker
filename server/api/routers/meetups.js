@@ -1,11 +1,30 @@
 // Imports
 const router = require('express').Router()
+const cors = require('cors')
 const axios = require('axios')
 
 const {sleep} = require('../../utils')
 
+// Initializations
+const whitelist = [
+  'https://meetup-tracker.herokuapp.com',
+  'http://meetup-tracker.herokuapp.com',
+  'https://fullstack-community.web.app',
+  'http://fullstack-community.web.app'
+]
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
 // Routes
-router.get('/curated', async (_, res, next) => {
+router.get('/curated', cors(corsOptions), async (req, res, next) => {
   try {
     const groups = [
       {id: '263790', name: 'The New York Python Meetup Group'},
@@ -50,7 +69,7 @@ router.get('/curated', async (_, res, next) => {
   }
 })
 
-router.get('/:groupId', async (req, res, next) => {
+router.get('/:groupId', cors(corsOptions), async (req, res, next) => {
   const {groupId} = req.params
 
   try {
