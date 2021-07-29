@@ -1,16 +1,16 @@
 // Imports
-import React, {Fragment} from 'react'
+import React from 'react'
 
 import {Groups, MadeBy} from '..'
 
 // Component
 const Home = () => {
   return (
-    <Fragment>
+    <>
       <Groups />
 
       <MadeBy />
-    </Fragment>
+    </>
   )
 }
 
