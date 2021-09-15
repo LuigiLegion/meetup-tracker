@@ -7,6 +7,7 @@ const {sleep} = require('../../utils')
 
 // Initializations
 const whitelist = [
+  'http://localhost:3000',
   'https://meetup-tracker.herokuapp.com',
   'http://meetup-tracker.herokuapp.com',
   'https://fullstack-community.web.app',
