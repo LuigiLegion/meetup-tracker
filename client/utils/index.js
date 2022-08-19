@@ -1,2 +1,2 @@
 // Exports
-export {default as toastNotification} from './generators/toastNotification'
+export {default as toast} from './materialize/toast'
