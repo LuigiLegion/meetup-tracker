@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 import {toggledPreloaderActionCreator} from '..'
-import {toastNotification} from '../../utils'
+import {toast} from '../../utils'
 
 // Initial State
 const initialState = {
@@ -38,7 +38,7 @@ export const getCuratedMeetupsThunkCreator = () => {
     } catch (error) {
       console.error(error)
       dispatch(gotCuratedMeetupsErrorActionCreator(error))
-      toastNotification('Error! Unable To Fetch Meetups', 'red')
+      toast('Error! Unable To Fetch Meetups', 'red')
     } finally {
       dispatch(toggledPreloaderActionCreator(false))
     }
