@@ -39,25 +39,33 @@ const LinksBurger = ({isLoggedIn, handleClick}) => {
               </div>
 
               <div>
-                <NavLink to="/" className="burger-link" onClick={closeMenu}>
-                  <span className="burger-text-color">Home</span>
+                <NavLink
+                  className="burger-link burger-text-color"
+                  to="/"
+                  onClick={closeMenu}
+                >
+                  Home
                 </NavLink>
               </div>
 
               <div>
                 <a
-                  className="burger-link"
+                  className="burger-link burger-text-color"
                   href="https://github.com/LuigiLegion/meetup-tracker"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="burger-text-color">Source</span>
+                  Source
                 </a>
               </div>
 
               <div>
-                <a className="burger-link" href="#" onClick={handleClick}>
-                  <span className="burger-text-color">Logout</span>
+                <a
+                  className="burger-link burger-text-color"
+                  href="#"
+                  onClick={handleClick}
+                >
+                  Logout
                 </a>
               </div>
             </>
@@ -69,31 +77,41 @@ const LinksBurger = ({isLoggedIn, handleClick}) => {
               </div>
 
               <div>
-                <NavLink to="/" className="burger-link" onClick={closeMenu}>
-                  <span className="burger-text-color">Home</span>
+                <NavLink
+                  className="burger-link burger-text-color"
+                  to="/"
+                  onClick={closeMenu}
+                >
+                  Home
                 </NavLink>
               </div>
 
               <div>
                 <a
-                  className="burger-link"
+                  className="burger-link burger-text-color"
                   href="https://github.com/LuigiLegion/meetup-tracker"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="burger-text-color">Source</span>
+                  Source
                 </a>
               </div>
 
               <div>
-                <a className="burger-link" href="/auth/meetup">
-                  <span className="burger-text-color">Login</span>
+                <a
+                  className="burger-link burger-text-color"
+                  href="/auth/meetup"
+                >
+                  Login
                 </a>
               </div>
 
               <div>
-                <a className="burger-link" href="/auth/meetup">
-                  <span className="burger-text-color">Signup</span>
+                <a
+                  className="burger-link burger-text-color"
+                  href="/auth/meetup"
+                >
+                  Signup
                 </a>
               </div>
             </>
