@@ -5,6 +5,7 @@
  * having to figure out which file they belong to!
  **/
 export {default as PageNotFound} from './404/PageNotFound'
+export {default as About} from './about/About'
 export {default as Home} from './dashboard/Home'
 export {default as MadeBy} from './dashboard/MadeBy'
 export {default as Links} from './links/Links'
