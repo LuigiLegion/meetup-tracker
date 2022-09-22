@@ -12,7 +12,7 @@ Coming soon...
 
 ## Description
 
-Responsive web app that allows users to explore a curated list of upcoming tech meetups in New York City.
+Responsive web app that allows users to explore a curated list of upcoming tech meetups in NYC.
 
 MVP completed in 2 days for a solo project.
 
